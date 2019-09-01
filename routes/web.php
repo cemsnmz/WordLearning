@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::post('/SaveWord','WordController@store');
     Route::post('/GetWords','WordController@index');
+    Route::post('/ChangeLang','HomeController@changeLang');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

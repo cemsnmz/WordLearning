@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import {mapActions} from 'vuex';
 
     export default {
         name: "AddWord",
@@ -30,25 +30,29 @@
             }
         },
         methods: {
+            ...mapActions([
+                'addWordActions'
+            ]),
             saveWord() {
-                axios.post('/SaveWord', {word: this.word, meaning: this.meaning})
+                this.addWordActions({word: this.word, meaning: this.meaning})
                     .then((res) => {
-                        this.$swal({
-                            title: res.data.message,
-                            type: res.data.type,
-                            timer: 2000,
-                            showConfirmButton: false
-                        });
-                        this.word = null;
-                        this.meaning = null;
-                    })
-                    .catch((err) => {
-                        this.$swal({
-                            title: err.data.message,
-                            type: err.data.type,
-                            timer: 2000,
-                            showConfirmButton: false
-                        })
+                        if (res.type === "success") {
+                            this.$swal({
+                                title: res.message,
+                                type: res.type,
+                                timer: 1500,
+                                showConfirmButton: false
+                            });
+                            this.word = null;
+                            this.meaning = null;
+                        } else {
+                            this.$swal({
+                                title: res.message,
+                                type: res.type,
+                                timer: 1500,
+                                showConfirmButton: false
+                            })
+                        }
                     })
             }
         }

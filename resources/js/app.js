@@ -9,6 +9,7 @@ window.Vue = require('vue');
 import { i18n } from './lang';
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import store from './store'
 
 Vue.use(VueSweetalert2);
 /**
@@ -36,5 +37,6 @@ const app = new Vue({
     i18n,
     mounted() {
         this.$i18n.locale = 'tr'
-    }
+    },
+    store
 });

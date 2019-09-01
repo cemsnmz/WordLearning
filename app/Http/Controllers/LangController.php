@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Lang;
-use Illuminate\Http\Request;
-
 class LangController extends Controller
 {
     /**
@@ -30,10 +27,10 @@ class LangController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
         //
     }
@@ -41,10 +38,10 @@ class LangController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Lang  $lang
+     * @param \App\Lang $lang
      * @return \Illuminate\Http\Response
      */
-    public function show(Lang $lang)
+    public function show()
     {
         //
     }
@@ -52,10 +49,10 @@ class LangController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Lang  $lang
+     * @param \App\Lang $lang
      * @return \Illuminate\Http\Response
      */
-    public function edit(Lang $lang)
+    public function edit()
     {
         //
     }
@@ -63,11 +60,11 @@ class LangController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Lang  $lang
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Lang $lang
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Lang $lang)
+    public function update()
     {
         //
     }
@@ -75,10 +72,10 @@ class LangController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Lang  $lang
+     * @param \App\Lang $lang
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Lang $lang)
+    public function destroy()
     {
         //
     }

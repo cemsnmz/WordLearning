@@ -19,6 +19,7 @@ const messages = {
         'word': 'Kelime',
         'meaning_word': 'Anlamı',
         'last_words': 'Son eklenen kelimeler',
+        'no_word': 'Gösterilecek kelime bulunamadı.',
     },
     en: {
         'word_learning': 'Word Learning',
@@ -32,6 +33,7 @@ const messages = {
         'word': 'Word',
         'meaning_word': 'Meaning of word',
         'last_words': 'Last words',
+        'no_word': 'There is no word to show.',
     }
 };
 
