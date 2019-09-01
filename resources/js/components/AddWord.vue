@@ -26,8 +26,7 @@
         data() {
             return {
                 word: null,
-                meaning: null,
-                deneme: null
+                meaning: null
             }
         },
         methods: {
